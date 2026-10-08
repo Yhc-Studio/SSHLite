@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows-x64:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build Release x64
+        shell: pwsh
+        run: msbuild SSHLiteWin32.sln /m /p:Configuration=Release /p:Platform=x64
+
+      - name: Stage artifact
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist\SSHLite-win-x64 | Out-Null
+          Copy-Item bin\Release\SSHLite.exe dist\SSHLite-win-x64\
+          Copy-Item bin\Release\SSHLiteAskPass.exe dist\SSHLite-win-x64\
+          Copy-Item README.md dist\SSHLite-win-x64\
+          Copy-Item LICENSE dist\SSHLite-win-x64\
+          Copy-Item RELEASE_NOTES.md dist\SSHLite-win-x64\
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SSHLite-win-x64
+          path: dist/SSHLite-win-x64

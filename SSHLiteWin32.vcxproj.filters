@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D3B4E4E6-472C-4238-B1A0-B3C81E0B82EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application">
+      <UniqueIdentifier>{E2556160-F807-486A-9EBF-9CB22CA29A0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SSH">
+      <UniqueIdentifier>{1C7F7F2A-64CF-4B1C-A21F-3F07F8DF355D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4B04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Application">
+      <UniqueIdentifier>{90486A6F-E5B0-4788-940D-93C80E30A66A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SSH">
+      <UniqueIdentifier>{7602D57F-E31F-4D75-822A-D7942762108D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{59E37DCA-4DCF-4626-A8AA-3A4F31989440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{0C8A29FA-0CC1-4880-91BC-6C6E2D2A720C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{4789A4A3-10BA-4ED0-A064-621AA41081E3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainWindow.cpp">
+      <Filter>Source Files\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SshBackend.cpp">
+      <Filter>Source Files\SSH</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SshCommand.cpp">
+      <Filter>Source Files\SSH</Filter>
+    </ClCompile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="src\MainWindow.h">
+      <Filter>Header Files\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SshBackend.h">
+      <Filter>Header Files\SSH</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SshCommand.h">
+      <Filter>Header Files\SSH</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppIds.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppTypes.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppServices.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="CHANGELOG.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="LICENSE">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="SECURITY.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="RELEASE_NOTES.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="docs\USAGE.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="docs\ARCHITECTURE.md">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include=".gitignore">
+      <Filter>Documentation</Filter>
+    </None>
+    <None Include="scripts\build_release.cmd">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="scripts\pack_release.ps1">
+      <Filter>Scripts</Filter>
+    </None>
+  </ItemGroup>
+</Project>

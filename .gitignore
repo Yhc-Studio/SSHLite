@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+
+# Build output
+bin/
+obj/
+x64/
+Debug/
+Release/
+
+# Runtime state / secrets
+SSHLite.ini
+*.log
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

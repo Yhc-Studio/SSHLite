@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible SSHLite problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, private keys, tokens, or private server addresses."
+  - type: input
+    id: version
+    attributes:
+      label: SSHLite version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized Activity log
+      description: Remove credentials and private host information.
